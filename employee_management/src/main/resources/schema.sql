@@ -1,4 +1,4 @@
-drop table employeedetails;
+--drop table employeedetails;
 CREATE TABLE employeedetails (
   emp_id_n INT NOT NULL,
   username_v VARCHAR(45) NOT NULL,
