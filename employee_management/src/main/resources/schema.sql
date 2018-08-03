@@ -12,4 +12,4 @@ CREATE TABLE employeedetails (
   security_answer_v VARCHAR(45) NULL,
   PRIMARY KEY (emp_id_n));
   
-  drop table employeedetails;
+  --drop table employeedetails;
