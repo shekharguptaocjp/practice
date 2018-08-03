@@ -109,6 +109,7 @@
         </executions>
     </plugin>  
 		</plugins>
+		<finalName>employee_management</finalName>
 	</build>
 
 	<repositories>
