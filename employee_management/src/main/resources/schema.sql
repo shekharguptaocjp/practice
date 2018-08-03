@@ -1,5 +1,5 @@
 --drop table employeedetails;
-delete from employeedetails;
+--delete from employeedetails;
 CREATE TABLE employeedetails (
  emp_id_n INT NOT NULL,
   username_v VARCHAR(45) NOT NULL,
@@ -11,3 +11,5 @@ CREATE TABLE employeedetails (
   security_question_v VARCHAR(45) NULL,
   security_answer_v VARCHAR(45) NULL,
   PRIMARY KEY (emp_id_n));
+  
+  drop table employeedetails;
