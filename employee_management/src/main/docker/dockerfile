@@ -11,7 +11,7 @@ EXPOSE 8080
 ARG JAR_FILE=target/employee_management.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} employee_management.jar
+ADD ${JAR_FILE} /employee_management.jar
 
 # Run the jar file 
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/employee_management.jar"]   
