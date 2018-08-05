@@ -14,7 +14,7 @@ EXPOSE 8080
 #COPY ${JAR_FILE} /employee_management.jar
 
 
-ADD target/employee_management.jar employee_management.jar
+#ADD target/employee_management.jar employee_management.jar
 
 ADD /var/lib/jenkins/workspace/employee_management_Proc/employee_management/target/docker/employee_management.jar /var/lib/docker/tmp/docker-builder252932808/target/employee_management.jar
 # Run the jar file  
