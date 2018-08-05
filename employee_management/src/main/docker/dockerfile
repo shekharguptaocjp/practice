@@ -11,7 +11,7 @@ EXPOSE 8080
 ARG JAR_FILE=target/employee_management.jar
 
 # Add the application's jar to the container  
-COPY target/employee_management.jar /var/lib/docker/tmp/
+COPY employee_management.jar /var/lib/docker/tmp/
 
 # Run the jar file  
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/employee_management.jar"]   
