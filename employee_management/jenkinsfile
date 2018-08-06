@@ -23,7 +23,7 @@ pipeline
 						}
 					   }	
 					} 
-					stage('Deployment-stage')
+					stage('Build-stage')
 					{
 					   steps
 					   {
@@ -32,6 +32,13 @@ pipeline
 							sh 'mvn -f employee_management/pom.xml package'
 						 }
 					   } 
-					}   
+					}  
+					 stage('Image') 
+					 {
+            			dir ('discovery-service') 
+            			{
+               				 sh 'docker build -t demoimage .'
+            			}
+        				} 
 			} 
 	}		
