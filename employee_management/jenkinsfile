@@ -37,7 +37,7 @@ pipeline
 					 {
 					 	steps
 					 	{
-            				dir ('/employee_management/target/docker') 
+            				dir ('employee_management/target/docker') 
             				{
                					 sh 'docker build -t demoimage .'
             				}
