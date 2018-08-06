@@ -29,7 +29,7 @@ pipeline
 					   {
 						 withMaven(maven:'Maven_3_3_9')
 						 {
-							sh 'mvn -f employee_management/pom.xml package'
+							sh 'mvn -f employee_management/pom.xml package docker:build kage'
 						 }
 					   } 
 					}  
