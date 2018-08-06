@@ -18,7 +18,7 @@ pipeline
 							sh 'mvn test'
 						}
 					} 
-					stage('Deployment-stage)
+					stage('Deployment-stage')
 					{
 						withMaven(maven)
 						{
