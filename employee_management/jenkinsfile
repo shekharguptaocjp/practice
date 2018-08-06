@@ -6,21 +6,21 @@ pipeline
 			{
 					stage('compile-stage')
 					{
-						withMaven(maven)
+						withMaven(maven:'Maven_3_3_9')
 						{
 							sh 'mvn clean compile'
 						}
 					}	
 					stage('Testing-stage')
 					{
-						withMaven(maven)
+						withMaven(maven:'Maven_3_3_9')
 						{
 							sh 'mvn test'
 						}
 					} 
 					stage('Deployment-stage')
 					{
-						withMaven(maven)
+						withMaven(maven:'Maven_3_3_9')
 						{
 							sh 'mvn package'
 						}
