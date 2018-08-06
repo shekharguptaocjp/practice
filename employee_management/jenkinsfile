@@ -35,10 +35,13 @@ pipeline
 					}  
 					 stage('Image') 
 					 {
-            			dir ('discovery-service') 
-            			{
-               				 sh 'docker build -t demoimage .'
-            			}
-        				} 
+					 	steps
+					 	{
+            				dir ('discovery-service') 
+            				{
+               					 sh 'docker build -t demoimage .'
+            				}
+        				}
+        			} 
 			} 
 	}		
