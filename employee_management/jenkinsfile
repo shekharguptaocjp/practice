@@ -1,0 +1,30 @@
+pipelin
+	{
+		agent any
+			
+			stages
+			{
+					stage('compile-stage')
+					{
+						withMaven(maven)
+						{
+							sh 'mvn clean compile'
+						}
+					}	
+					
+					stage('Testing-stage)
+					{
+						withMaven(maven)
+						{
+							sh 'mvn test'
+						}
+					} 
+					stage('Deployment-stage)
+					{
+						withMaven(maven)
+						{
+							sh 'mvn package'
+						}
+					} 
+			}
+	}		
