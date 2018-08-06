@@ -33,7 +33,7 @@ pipeline
 						 }
 					   } 
 					}  
-					 stage('Image') 
+					 stage('Docker Image') 
 					 {
 					 	steps
 					 	{
@@ -42,6 +42,15 @@ pipeline
                					 sh 'docker build -t demoimage .'
             				}
         				}
+        			 }
+        			 stage ('Run Docker') 
+        			 {
+            			steps
+            			{
+            				//docker.image("localhost:5000/discovery-service:${env.version}").run('-p 8761:8761 -h discovery --name discovery')
+            				sh 'docker run -p 9000:9000 -d demoimage'
+            				
+            			}	
         			} 
 			} 
 	}		
