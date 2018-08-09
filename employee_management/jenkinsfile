@@ -27,7 +27,8 @@ pipeline
 					 {
             			steps 
             			{
-              				withSonarQubeEnv('My SonarQube Server') 
+              				//withSonarQubeEnv('My SonarQube Server') 
+              				withMaven(maven:'Maven_3_3_9')
               				{
                 				sh 'mvn sonar:sonar'
              				 }
